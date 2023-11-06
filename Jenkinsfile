@@ -12,8 +12,8 @@ node {
     writeFile file: "output/uselessfile.md", text: "This file is useless, no need to archive it."
           }
     stage("Archive build output") {
-    
+       echo " Archive Build Output"
     // Archive the build output artifacts.
-    archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
+    //archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
     }
 }
